@@ -1,0 +1,111 @@
+/* BackgroundStyles.module.css */
+
+/* Solid Color Backgrounds */
+.bgPrimary {
+    background-color: #007bff;
+}
+
+.bgSecondary {
+    background-color: #6c757d;
+}
+
+.bgSuccess {
+    background-color: #28a745;
+}
+
+.bgDanger {
+    background-color: #dc3545;
+}
+
+.yellow {
+    background-color: #ffc107;
+}
+
+.bgInfo {
+    background-color: #17a2b8;
+}
+
+.bgLight {
+    background-color: #f8f9fa;
+}
+
+.bgDark {
+    background-color: #343a40;
+}
+
+/* Gradient Backgrounds */
+.bgGradientPrimary {
+    background: linear-gradient(45deg, #007bff, #0056b3);
+}
+
+.bgGradientSuccess {
+    background: linear-gradient(45deg, #28a745, #155d27);
+}
+
+
+
+/* Transparent Background */
+.bgTransparent {
+    background-color: transparent;
+}
+
+/*all colour
+/* ColorStyles.module.css */
+
+/* Text Colors */
+.textPrimary {
+    color: #007bff;
+}
+
+.textSecondary {
+    color: #6c757d;
+}
+
+.textSuccess {
+    color: #28a745;
+}
+
+.textDanger {
+    color: #dc3545;
+}
+
+.textWarning {
+    color: #ffc107;
+}
+
+.textInfo {
+    color: #17a2b8;
+}
+
+.textLight {
+    color: #f8f9fa;
+}
+
+.textDark {
+    color: #343a40;
+}
+
+/* Background Colors */
+.bgPrimary {
+    background-color: #007bff;
+}
+
+.bgSecondary {
+    background-color: #6c757d;
+}
+
+.bgSuccess {
+    background-color: #28a745;
+}
+
+.bgDanger {
+    background-color: #dc3545;
+}
+
+.bgWarning {
+    background-color: #ffc107;
+}
+
+.bgInfo {
+    background-color: #17a2b8;
+}

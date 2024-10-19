@@ -1,0 +1,141 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.label {
+  position: absolute;
+  left: 25px;
+  top: 26px;
+  z-index: 2;
+}
+
+.custom-navbar{
+  width: 1260px;
+  height: 79px;
+  position: fixed;
+  background: rgba(217, 217, 217, 0.59);
+  z-index:1;
+  display: flex;
+  position: relative;
+}
+
+.home {
+  color: #000;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+  .homealign{
+  /* Flex properties */
+  display: flex;
+  align-items: center;        /* Align vertically center */
+    /* Align to the right */
+  padding-right: 20px;
+  position: absolute;
+  left:541px;
+  top: 32px;
+  /* Optional: Add some padding to the right */
+}
+.tourfbooking{
+  display: flex;
+  color: #000;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 700;
+  position:absolute;
+  left: 637px;
+  top: 32px;
+  gap: 53px;
+}
+.logo{
+
+  
+    position: absolute; /* Keeps the image positioned absolutely */
+    top: 26px; /* Use relative units like rem for better scaling */
+    left: 25px;
+    max-width: 100%; /* Ensures the image scales according to its container */
+    height: auto; /* Maintains the aspect ratio */
+  
+  
+}
+/* Button styles */
+.btn-transparent {
+  background-color: transparent;
+  border: 2px solid transparent;
+  color: black;
+  padding: 8px 16px;
+  transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+/* Hover effect */
+.btn-transparent:hover {
+  background-color: #007bff; /* Blue background on hover */
+  color: white; /* White text on hover */
+
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Slight shadow effect */
+  transform: scale(1.05); /* Slight scaling effect */
+  opacity: 0.9; /* Slightly reduce opacity on hover */
+}
+.btn-transparent:active {
+  transform: scale(0.95); /* Slightly shrink when active */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Reduce shadow */
+}
+.btn-transparent:focus {
+  outline: none; /* Removes default outline */
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5); /* Blue outline for focus */
+}
+.card:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.background-image {
+  background-image: url('./grass1.jpg'); /* Replace with your image path */
+  background-size: cover; /* Ensures the image covers the entire div */
+  background-position: center; /* Centers the background image */
+  padding: 20px;
+  margin-top:1px ; /* Optional: Adds some padding */
+   /* Optional: Adds rounded corners */
+  min-height: 100vh; /* Optional: Ensures the background covers the full height of the viewport */
+}
+
+
