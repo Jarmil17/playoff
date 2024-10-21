@@ -7,12 +7,12 @@ const Home = () => {
     const navigate = useNavigate();
 
     const cities = [
-        { name: "Ahmedabad", img: "./card.svg" },
+        { name: "Ahmedabad", img: "./delhi.svg" },
         { name: "Delhi", img: "./delhi.svg" },
         { name: "Mumbai", img: "./mumbai.svg" },
         { name: "Chennai", img: "./chennai.jpg" },
         { name: "Bengaluru", img: "./bangalore.jpg" },
-        { name: "surat", img: "./surat.jpg" }
+        { name: "surat", img: "./delhi.jpg" }
     ];
 
     // Filter cities based on the search term
