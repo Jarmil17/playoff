@@ -6,9 +6,10 @@ import CommunityPage from './Navbar/CommunityPage'; // Import Community Page com
 import Footer from './Navbar/Footer';
 import Home from './Navbar/Home';
 import Navbar from './Navbar/Navbar';
-import TurfInfo from './Navbar/TurfInfo';
+import Profile from './Navbar/profile';
+import SlotBooking from './Navbar/slot-booking';
 import TournamentPage from './Navbar/tournament';
-
+import TurfInfo from './Navbar/TurfInfo';
 
 function App() {
     return (
@@ -24,6 +25,8 @@ function App() {
                 <Route path="/TurfInfo/:turfId" element={<TurfInfo />} />
                 <Route path="/community" element={<CommunityPage />} />  {/* Community Page */}
                 <Route path="/tournament" element={<TournamentPage/>} />
+                <Route path="/slot-booking" element={< SlotBooking />} />
+                <Route path="/profile" element={<Profile />} />
             </Routes>
             </div>
                 <Footer />

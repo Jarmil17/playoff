@@ -138,4 +138,176 @@
   min-height: 100vh; /* Optional: Ensures the background covers the full height of the viewport */
 }
 
+/* src/TournamentPage.css */
 
+/* Set a lush green gradient background for the entire container */
+body {
+  background: linear-gradient(to bottom right, #4CAF50, #A5D6A7); /* Gradient from dark green to light green */
+  color: #333; /* Default text color */
+}
+
+.container {
+  padding: 20px; /* Extra padding for container */
+}
+
+/* Tournament card styling */
+.tournament-card {
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: none; /* Remove card border for a cleaner look */
+}
+
+.tournament-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Title styling */
+.tournament-title {
+  color: #2E7D32; /* Dark green for the title */
+  font-weight: bold;
+}
+
+/* Image styling */
+.tournament-image {
+  height: 200px; /* Set a fixed height for images */
+  object-fit: cover; /* Ensure images cover the card */
+}
+
+/* Modal styling */
+.modal-content {
+  background-color: #f9f9f9; /* Light background for the modal */
+}
+
+.modal-header {
+  background-color: #4CAF50; /* Green header for the modal */
+  color: white; /* White text for header */
+}
+
+.modal-footer {
+  border-top: none; /* Remove border from footer */
+}
+
+/* Search bar styling */
+.form-control {
+  border-radius: 25px; /* Rounded edges for search bar */
+  border: 2px solid #4CAF50; /* Green border */
+}
+
+.form-control:focus {
+  border-color: #A5D6A7; /* Lighter green focus */
+}
+
+/* Button styling */
+.btn-outline-primary {
+  border-color: #4CAF50; /* Green border */
+  color: #4CAF50; /* Green text */
+}
+
+.btn-outline-primary:hover {
+  background-color: #4CAF50; /* Green background on hover */
+  color: white; /* White text on hover */
+}
+.profile-page {
+  padding-top: 40px;
+}
+
+.profile-img img {
+  border: 3px solid #007bff;
+}
+
+.bio {
+  font-size: 1.1em;
+  font-style: italic;
+}
+
+button {
+  font-weight: 600;
+}
+/* Full-page background related to turf theme */
+.turfs-page {
+  background-image: url('');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  color: #fff;
+}
+
+/* Card Styles */
+.turf-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.turf-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.turf-card img {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.card-img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);  /* Dark overlay effect */
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.turf-card:hover .card-img-overlay {
+  opacity: 1;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.book-btn {
+  background-color: #28a745;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.book-btn:hover {
+  background-color: #218838;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .card-title {
+      font-size: 1.2rem;
+  }
+
+  .card-text {
+      font-size: 1rem;
+  }
+
+  .book-btn {
+      padding: 8px 16px;
+  }
+}

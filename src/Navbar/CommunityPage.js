@@ -5,10 +5,10 @@ import React, { useState } from 'react';
 const CommunityPage = () => {
     // Dummy list of users with profile icons
     const [users] = useState([
-        { id: 1, name: 'User 1', profilePic: 'https://via.placeholder.com/40' },
-        { id: 2, name: 'User 2', profilePic: 'https://via.placeholder.com/40' },
-        { id: 3, name: 'User 3', profilePic: 'https://via.placeholder.com/40' },
-        { id: 4, name: 'User 4', profilePic: 'https://via.placeholder.com/40' },
+        { id: 1, name: 'jarmil', profilePic: 'https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?size=338&ext=jpg' },
+        { id: 2, name: 'Henil', profilePic: 'https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?size=338&ext=jpg '},
+        { id: 3, name: 'Himanshu', profilePic: 'https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?size=338&ext=jpg' },
+        { id: 4, name: 'Mohit', profilePic: 'https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?size=338&ext=jpg' },
     ]);
     
     const [messages, setMessages] = useState([

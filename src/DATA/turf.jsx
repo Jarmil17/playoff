@@ -1,7 +1,11 @@
 const turfsData = {
     Ahmedabad: [
         { id: 1, name: "sporting turf", address: "Location 1", img: "/turf1.jpg" },
-        { id: 2, name: "Ahmedabad Turf 2", address: "Location 2", img: "/turf1.jpg" }
+        { id: 2, name: "Ahmedabad Turf ", address: "Location 2", img: "/turf1.jpg" },
+        { id: 3, name: "real madrid Turf ", address: "Location 2", img: "/turf1.jpg" },
+        { id: 4, name: "united Turf ", address: "Location 2", img: "/turf1.jpg" },
+        { id: 5, name: "hillock Turf 2", address: "Location 2", img: "/turf1.jpg" },
+        { id: 6, name: "Ahmedabad Turf 2", address: "Location 2", img: "/turf1.jpg" }
     ],
     Delhi: [
         { id: 3, name: "Delhi Turf 1", address: "Location 1", img: "/turf1.jpg" },

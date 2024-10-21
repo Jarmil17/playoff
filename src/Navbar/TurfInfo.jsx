@@ -1,20 +1,20 @@
+// src/TurfInfo.js
+
 import React from 'react';
-import { Button, Card, Col, Container, Row } from 'react-bootstrap'; // Import React Bootstrap components
+import { Button, Card, Col, Container, Row } from 'react-bootstrap';
 import { useNavigate, useParams } from 'react-router-dom';
 import turfsData from '../DATA/turf'; // Ensure the import path is correct
 
 const TurfInfo = () => {
-    const { turfId } = useParams(); // Get turfId from URL params
+    const { turfId } = useParams();
     const navigate = useNavigate();
 
-    // Combine all city turfs into a single array, with fallback to empty array
     const allTurfs = [
         ...(turfsData.Ahmedabad || []),
         ...(turfsData.Delhi || []),
         ...(turfsData.Mumbai || [])
     ];
 
-    // Find the selected turf by its id
     const selectedTurf = allTurfs.find((turf) => turf.id === parseInt(turfId));
 
     if (!selectedTurf) {
@@ -22,7 +22,7 @@ const TurfInfo = () => {
     }
 
     const handleBookNow = () => {
-        navigate('/slot-booking');
+        navigate('/slot-booking', { state: { turf: selectedTurf } }); // Pass turf data
     };
 
     return (
@@ -39,7 +39,6 @@ const TurfInfo = () => {
             </Row>
 
             <Row className="justify-content-center">
-                {/* Left side with the image */}
                 <Col md={7} className="mb-4">
                     <img
                         src={selectedTurf.img}
@@ -49,7 +48,6 @@ const TurfInfo = () => {
                     />
                 </Col>
 
-                {/* Right side with details */}
                 <Col md={5} className="mb-4">
                     <Card className="shadow-sm">
                         <Card.Body>
@@ -57,7 +55,7 @@ const TurfInfo = () => {
                                 variant="success"
                                 size="lg"
                                 className="w-100 mb-3"
-                                onClick={handleBookNow}
+                                onClick={handleBookNow} // Trigger navigation
                             >
                                 Book Now
                             </Button>
@@ -75,7 +73,8 @@ const TurfInfo = () => {
                             <div className="mb-3">
                                 <iframe
                                     title="Turf Location"
-                                    src={`https://api.maptiler.com/geocoding/${selectedTurf.location}.json?key=GwK3Tin6ZeMUt3HTRx1P`}
+                                    src={`https://www.google.com/maps/place/Eiffel+Tower/48.8588443,2.2943506
+`}
                                     width="100%"
                                     height="200"
                                     frameBorder="0"

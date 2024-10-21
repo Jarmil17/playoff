@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { Button, Card, Col, Container, Form, Modal, Row } from 'react-bootstrap';
+import '../Navbar/App.css'; // Import CSS for additional styling
 
 const TournamentPage = () => {
     const [searchTerm, setSearchTerm] = useState('');
-    const [selectedTournament, setSelectedTournament] = useState(null); // Store selected tournament
-    const [showModal, setShowModal] = useState(false); // Control modal visibility
+    const [selectedTournament, setSelectedTournament] = useState(null);
+    const [showModal, setShowModal] = useState(false);
 
     // Sample tournament data
     const tournaments = [
@@ -17,27 +18,29 @@ const TournamentPage = () => {
             location: 'City Stadium',
             prize: '1000',
             slots: '10/20',
+            image: 'https://marketplace.canva.com/EAFJp9GmOyw/1/0/1600w/canva-black-and-red-bold-cricket-match-instagram-post-rmL8XLTxRuM.jpg' // Placeholder image
         },
         {
             id: 2,
-            title: 'karnavati box cricket',
+            title: 'Karnavati Box Cricket',
             turf: 'Turf B',
             date: '28th October, 2024',
             time: '11:00 AM',
             location: 'West Ground',
             prize: '500',
             slots: '8/16',
+            image: 'https://marketplace.canva.com/EAFJp9GmOyw/1/0/1600w/canva-black-and-red-bold-cricket-match-instagram-post-rmL8XLTxRuM.jpg' // Placeholder image
         },
-        // Add more tournament data here
         {
             id: 3,
-            title: 'ymca box cricket',
-            turf: 'Turf c',
-            date: '28th October, 2024',
-            time: '11:00 AM',
-            location: 'West Ground',
-            prize: '500',
-            slots: '8/16',
+            title: 'YMCA Box Cricket',
+            turf: 'Turf C',
+            date: '30th October, 2024',
+            time: '2:00 PM',
+            location: 'Central Park',
+            prize: '750',
+            slots: '5/10',
+            image: 'https://marketplace.canva.com/EAFJp9GmOyw/1/0/1600w/canva-black-and-red-bold-cricket-match-instagram-post-rmL8XLTxRuM.jpg' // Placeholder image
         },
     ];
 
@@ -46,13 +49,11 @@ const TournamentPage = () => {
         tournament.title.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
-    // Function to handle showing the modal
     const handleShowModal = (tournament) => {
         setSelectedTournament(tournament);
         setShowModal(true);
     };
 
-    // Function to handle closing the modal
     const handleCloseModal = () => {
         setShowModal(false);
     };
@@ -75,21 +76,22 @@ const TournamentPage = () => {
                 {filteredTournaments.length > 0 ? (
                     filteredTournaments.map((tournament) => (
                         <Col md={6} lg={4} className="mb-4" key={tournament.id}>
-                            <Card className="h-100">
+                            <Card className="h-100 shadow tournament-card">
+                                <Card.Img variant="top" src={tournament.image} className="tournament-image" />
                                 <Card.Body>
-                                    <Card.Title>{tournament.title}</Card.Title>
+                                    <Card.Title className="tournament-title">{tournament.title}</Card.Title>
                                     <Card.Text>
                                         <strong>Turf:</strong> {tournament.turf} <br />
                                         <strong>Date:</strong> {tournament.date} <br />
                                         <strong>Time:</strong> {tournament.time} <br />
                                         <strong>Location:</strong> {tournament.location} <br />
-                                        <strong>Prize:</strong> {tournament.prize} <br />
+                                        <strong>Prize:</strong> ₹{tournament.prize} <br />
                                         <strong>Available Slots:</strong> {tournament.slots}
                                     </Card.Text>
                                     <Button
                                         variant="outline-primary"
                                         className="mt-2"
-                                        onClick={() => handleShowModal(tournament)} // Pass tournament to the modal
+                                        onClick={() => handleShowModal(tournament)}
                                     >
                                         Enroll Now
                                     </Button>
@@ -114,7 +116,7 @@ const TournamentPage = () => {
                         <p><strong>Date:</strong> {selectedTournament.date}</p>
                         <p><strong>Time:</strong> {selectedTournament.time}</p>
                         <p><strong>Location:</strong> {selectedTournament.location}</p>
-                        <p><strong>Prize:</strong> {selectedTournament.prize}</p>
+                        <p><strong>Prize:</strong> ₹{selectedTournament.prize}</p>
                         <p><strong>Available Slots:</strong> {selectedTournament.slots}</p>
                     </Modal.Body>
                     <Modal.Footer>
