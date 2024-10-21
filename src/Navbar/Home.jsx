@@ -12,7 +12,7 @@ const Home = () => {
         { name: "Mumbai", img: "./mumbai.svg" },
         { name: "Chennai", img: "./chennai.jpg" },
         { name: "Bengaluru", img: "./bangalore.jpg" },
-        { name: "surat", img: "./delhi.jpg" }
+        { name: "surat", img: "./delhi.svg" }
     ];
 
     // Filter cities based on the search term
